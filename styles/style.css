@@ -12,10 +12,11 @@ body {
 
 h1 {
 	position: relative;
-	margin: 50px auto;
+	margin: 100px auto;
 	width: 200px;
 }
 
+/* custom btn */
 .input-container {
 	position: relative;
 	margin: 50px auto;
@@ -62,4 +63,26 @@ h1 {
 .input-container input[type="text"]:focus ~ .underline,
 .input-container input[type="text"]:valid ~ .underline {
 	transform: scaleX(1);
+}
+
+/* custom bgc */
+.custom-shape-divider-top-1706559000 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.custom-shape-divider-top-1706559000 svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 83px;
+	transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1706559000 .shape-fill {
+	fill: #d8d1d1;
 }
