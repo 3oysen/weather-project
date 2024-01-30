@@ -1,88 +1,88 @@
 * {
-	margin: 0;
-	padding: 0;
-	font-family: "Poppins", sans-serif;
-	box-sizing: border-box;
-	color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  color: #fff;
 }
 
 body {
-	background-color: #222;
+  background-color: #222;
 }
 
 h1 {
-	position: relative;
-	margin: 100px auto;
-	width: 200px;
+  position: relative;
+  margin: 100px auto;
+  width: 200px;
 }
 
 /* custom btn */
 .input-container {
-	position: relative;
-	margin: 50px auto;
-	width: 200px;
+  position: relative;
+  margin: 50px auto;
+  width: 200px;
 }
 
-.input-container input[type="text"] {
-	font-size: 20px;
-	width: 100%;
-	border: none;
-	border-bottom: 2px solid #ccc;
-	padding: 5px 0;
-	background-color: transparent;
-	outline: none;
+.input-container input[type=text] {
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
 }
 
 .input-container .label {
-	position: absolute;
-	top: 0;
-	left: 0;
-	color: #ccc;
-	transition: all 0.3s ease;
-	pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ccc;
+  transition: all 0.3s ease;
+  pointer-events: none;
 }
 
-.input-container input[type="text"]:focus ~ .label,
-.input-container input[type="text"]:valid ~ .label {
-	top: -20px;
-	font-size: 16px;
-	color: #333;
+.input-container input[type=text]:focus ~ .label,
+.input-container input[type=text]:valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #333;
 }
 
 .input-container .underline {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 2px;
-	width: 100%;
-	background-color: #333;
-	transform: scaleX(0);
-	transition: all 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
 }
 
-.input-container input[type="text"]:focus ~ .underline,
-.input-container input[type="text"]:valid ~ .underline {
-	transform: scaleX(1);
+.input-container input[type=text]:focus ~ .underline,
+.input-container input[type=text]:valid ~ .underline {
+  transform: scaleX(1);
 }
 
 /* custom bgc */
 .custom-shape-divider-top-1706559000 {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	overflow: hidden;
-	line-height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .custom-shape-divider-top-1706559000 svg {
-	position: relative;
-	display: block;
-	width: calc(100% + 1.3px);
-	height: 83px;
-	transform: rotateY(180deg);
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 83px;
+  transform: rotateY(180deg);
 }
 
 .custom-shape-divider-top-1706559000 .shape-fill {
-	fill: #d8d1d1;
-}
+  fill: #d8d1d1;
+}/*# sourceMappingURL=style.css.map */
