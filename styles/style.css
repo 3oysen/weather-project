@@ -1,3 +1,10 @@
+.search-button {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0px;
+}
+
 .input-container {
   position: relative;
   margin: 50px auto;
@@ -64,6 +71,12 @@ h1 {
   width: 200px;
 }
 
+.justify {
+  position: relative;
+  margin: 50px auto;
+  width: 200px;
+}
+
 .shape-divider-top {
   position: absolute;
   top: 0;
@@ -83,4 +96,8 @@ h1 {
 
 .shape-divider-top .shape-fill {
   fill: #d8d1d1;
+}
+
+.weather img {
+  width: 50px;
 }/*# sourceMappingURL=style.css.map */

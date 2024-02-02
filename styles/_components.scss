@@ -1,5 +1,12 @@
 // everything that is reusable – buttons, navbars, cards, and so on
 
+.search-button {
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	right: 0px;
+}
+
 .input-container {
 	position: relative;
 	margin: 50px auto;
