@@ -31,6 +31,8 @@ async function checkWeather(city) {
 	} else if (data.weather[0].main == "Thunderstorm") {
 		weatherIcon.src = "/images/icon-weather/thunderstorm.png";
 	}
+
+	document.querySelector(".weather").style.display = "block";
 }
 
 searchBtn.addEventListener("click", () => {
