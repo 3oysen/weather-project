@@ -32,6 +32,7 @@ async function checkWeather(city) {
 		weatherIcon.src = "/images/icon-weather/thunderstorm.png";
 	}
 
+	document.querySelector(".sun-loader").style.display = "none";
 	document.querySelector(".weather").style.display = "block";
 }
 
