@@ -1,15 +1,23 @@
-const apiKey = "f25bab9a93ee0fdeef42e879c13d7d45";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+const weatherApiKey = "f25bab9a93ee0fdeef42e879c13d7d45";
+const weatherApiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+const citiesApiUrl = "https://countriesnow.space/api/v0.1/countries";
 
 const searchInput = document.querySelector(".input-container input");
 const searchBtn = document.querySelector(".search-button button");
 const weatherIcon = document.querySelector(".weather-icon");
 
-async function checkWeather(city) {
-	const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-	const data = await response.json();
+async function checkCities() {
+	const response = await fetch(citiesApiUrl);
+	const citiesData = await response.json();
+	console.log(citiesData.data);
 
-	console.log(data);
+	const allCities = citiesData.data.flatMap((x) => x.cities);
+	console.log(allCities);
+}
+
+async function checkWeather(city) {
+	const response = await fetch(weatherApiUrl + city + `&appid=${weatherApiKey}`);
+	const data = await response.json();
 
 	document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
 	document.querySelector(".city").innerHTML = data.name;
@@ -39,3 +47,5 @@ async function checkWeather(city) {
 searchBtn.addEventListener("click", () => {
 	checkWeather(searchInput.value);
 });
+
+checkCities();
