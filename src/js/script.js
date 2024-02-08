@@ -9,11 +9,19 @@ const weatherIcon = document.querySelector(".weather-icon");
 async function checkCities() {
 	const response = await fetch(citiesApiUrl);
 	const citiesData = await response.json();
-	console.log(citiesData.data);
-
 	const allCities = citiesData.data.flatMap((x) => x.cities);
 	console.log(allCities);
+
+	// allCities.includes(searchInput.value);
 }
+
+function handleInputChange() {
+	const text = searchInput.value;
+	// console.log(searchInput.value);
+	checkCities(text);
+}
+
+searchInput.addEventListener("input", handleInputChange);
 
 async function checkWeather(city) {
 	const response = await fetch(weatherApiUrl + city + `&appid=${weatherApiKey}`);
