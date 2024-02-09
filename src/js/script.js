@@ -6,19 +6,21 @@ const searchInput = document.querySelector(".input-container input");
 const searchBtn = document.querySelector(".search-button button");
 const weatherIcon = document.querySelector(".weather-icon");
 
-async function checkCities() {
+async function checkCities(text) {
 	const response = await fetch(citiesApiUrl);
 	const citiesData = await response.json();
 	const allCities = citiesData.data.flatMap((x) => x.cities);
-	console.log(allCities);
-
-	// allCities.includes(searchInput.value);
+	const allCitiesToLowerCase = allCities.map((x) => x.toLowerCase());
+	const mapChecked = allCitiesToLowerCase.map((x) => x.includes(text));
+	// console.log(allCities);
+	console.log(allCitiesToLowerCase);
+	console.log(mapChecked);
 }
 
 function handleInputChange() {
 	const text = searchInput.value;
-	// console.log(searchInput.value);
 	checkCities(text);
+	// console.log(text);
 }
 
 searchInput.addEventListener("input", handleInputChange);
@@ -56,4 +58,4 @@ searchBtn.addEventListener("click", () => {
 	checkWeather(searchInput.value);
 });
 
-checkCities();
+// checkCities();
