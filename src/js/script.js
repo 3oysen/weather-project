@@ -15,6 +15,8 @@ async function checkCities(text) {
 	// console.log(allCities);
 	console.log(allCitiesToLowerCase);
 	console.log(mapChecked);
+
+	//TODO add a solution when the user types text in uppercase in the input
 }
 
 function handleInputChange() {

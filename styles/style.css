@@ -1,3 +1,10 @@
+.justify {
+  position: relative;
+  margin: 50px auto;
+  width: 400px;
+  text-align: center;
+}
+
 .search-button {
   display: flex;
   justify-content: flex-end;
@@ -65,20 +72,52 @@ body {
   background-color: #222;
 }
 
-.weather {
-  display: none;
-}
-
 h1 {
   position: relative;
   margin: 100px auto;
   width: 200px;
 }
 
-.justify {
-  position: relative;
-  margin: 50px auto;
-  width: 200px;
+.weather {
+  display: none;
+}
+.weather .weather-icon {
+  width: 170px;
+}
+.weather img {
+  width: 50px;
+}
+.weather h1 {
+  font-size: 80px;
+  font-weight: 500;
+  margin: 10px;
+  width: 400px;
+}
+.weather h2 {
+  font-size: 45px;
+  font-weight: 400;
+}
+.weather .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  padding: 0 20px;
+  margin: 10px;
+}
+.weather .details .col {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.weather .details .col img {
+  width: 70px;
+  margin-right: 10px;
+}
+.weather .details .col .humidity,
+.weather .details .col .wind {
+  font-size: 28px;
+  margin-top: 6px;
 }
 
 .shape-divider-top {
@@ -89,7 +128,6 @@ h1 {
   overflow: hidden;
   line-height: 0;
 }
-
 .shape-divider-top svg {
   position: relative;
   display: block;
@@ -100,10 +138,6 @@ h1 {
 
 .shape-divider-top .shape-fill {
   fill: #d8d1d1;
-}
-
-.weather img {
-  width: 50px;
 }
 
 .sun-loader {
@@ -121,7 +155,7 @@ h1 {
 
 .front {
   padding-top: 45px;
-  margin-left: 25px;
+  margin-left: -100px;
   display: inline;
   position: absolute;
   z-index: 11;
@@ -130,8 +164,8 @@ h1 {
 }
 
 .back {
-  margin-top: -30px;
-  margin-left: 150px;
+  margin-top: -25px;
+  margin-left: 90px;
   z-index: 12;
   animation: clouds 12s infinite;
   animation-timing-function: ease-in-out;

@@ -12,20 +12,52 @@ body {
 	background-color: #222;
 }
 
-.weather {
-	display: none;
-}
-
 h1 {
 	position: relative;
 	margin: 100px auto;
 	width: 200px;
 }
 
-.justify {
-	position: relative;
-	margin: 50px auto;
-	width: 200px;
+.weather {
+	display: none;
+	.weather-icon {
+		width: 170px;
+	}
+	img {
+		width: 50px;
+	}
+	h1 {
+		font-size: 80px;
+		font-weight: 500;
+		margin: 10px;
+		width: 400px;
+	}
+	h2 {
+		font-size: 45px;
+		font-weight: 400;
+	}
+	.details {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 400px;
+		padding: 0 20px;
+		margin: 10px;
+		.col {
+			display: flex;
+			align-items: center;
+			text-align: left;
+			img {
+				width: 70px;
+				margin-right: 10px;
+			}
+			.humidity,
+			.wind {
+				font-size: 28px;
+				margin-top: 6px;
+			}
+		}
+	}
 }
 
 .shape-divider-top {
@@ -35,20 +67,16 @@ h1 {
 	width: 100%;
 	overflow: hidden;
 	line-height: 0;
-}
 
-.shape-divider-top svg {
-	position: relative;
-	display: block;
-	width: calc(100% + 1.3px);
-	height: 83px;
-	transform: rotateY(180deg);
+	svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 83px;
+		transform: rotateY(180deg);
+	}
 }
 
 .shape-divider-top .shape-fill {
 	fill: #d8d1d1;
-}
-
-.weather img {
-	width: 50px;
 }
