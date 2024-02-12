@@ -20,7 +20,8 @@ async function checkCities(text) {
 }
 
 function handleInputChange() {
-	const text = searchInput.value;
+	const inputData = searchInput.value;
+	const text = inputData.toLowerCase();
 	checkCities(text);
 	// console.log(text);
 }
