@@ -29,6 +29,20 @@ h1 {
 
 .suggestions {
 	list-style: none;
+	margin-top: 20px;
+
+	button {
+		width: 200px;
+		transition-duration: 0.4s;
+		background-color: #555555;
+		// margin: 5px;
+		padding: 5px 20px;
+	}
+	:hover {
+		background-color: #e7e7e7;
+		color: #555555;
+		font-weight: 700;
+	}
 }
 
 .weather {

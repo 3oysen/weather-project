@@ -12,6 +12,9 @@ async function checkCities(text) {
 	const allCities = citiesData.data.flatMap((x) => x.cities);
 	const allCitiesToLowerCase = allCities.map((x) => x.toLowerCase());
 	const mapChecked = allCitiesToLowerCase.map((x) => x.includes(text));
+	if (mapChecked) {
+		console.log("test");
+	}
 	// console.log(allCities);
 	console.log(allCitiesToLowerCase);
 	console.log(mapChecked);
