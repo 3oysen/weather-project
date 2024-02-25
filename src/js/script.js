@@ -11,12 +11,14 @@ async function checkCities(text) {
 	const citiesData = await response.json();
 	const allCities = citiesData.data.flatMap((x) => x.cities);
 	const allCitiesToLowerCase = allCities.map((x) => x.toLowerCase());
-	const mapChecked = allCitiesToLowerCase.map((x) => x.includes(text));
-	if (mapChecked) {
-		console.log("test");
-	}
-	// console.log(allCities);
-	console.log(allCitiesToLowerCase);
+	const mapChecked = allCitiesToLowerCase.filter((x) => x.includes(text));
+
+	document.getElementById("suggestionOne").innerHTML = mapChecked[0];
+	document.getElementById("suggestionTwo").innerHTML = mapChecked[1];
+	document.getElementById("suggestionTree").innerHTML = mapChecked[2];
+	document.getElementById("suggestionFour").innerHTML = mapChecked[3];
+	document.getElementById("suggestionFive").innerHTML = mapChecked[4];
+
 	console.log(mapChecked);
 }
 

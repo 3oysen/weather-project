@@ -102,6 +102,7 @@ h1 p {
 
 .weather {
   display: none;
+  margin-top: 190px;
 }
 .weather .weather-icon {
   width: 170px;
@@ -169,7 +170,7 @@ h1 p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 150px;
+  margin-top: 165px;
 }
 
 .cloud {

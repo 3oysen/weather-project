@@ -12,8 +12,8 @@ body {
 	background-color: #222;
 }
 
-.container {
-}
+// .container {
+// }
 
 h1 {
 	position: relative;
@@ -47,6 +47,8 @@ h1 {
 
 .weather {
 	display: none;
+	margin-top: 190px;
+
 	.weather-icon {
 		width: 170px;
 	}
