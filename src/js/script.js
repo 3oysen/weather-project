@@ -13,11 +13,12 @@ async function checkCities(text) {
 	const allCitiesToLowerCase = allCities.map((x) => x.toLowerCase());
 	const mapChecked = allCitiesToLowerCase.filter((x) => x.includes(text));
 
-	document.getElementById("suggestionOne").innerHTML = mapChecked[0];
-	document.getElementById("suggestionTwo").innerHTML = mapChecked[1];
-	document.getElementById("suggestionTree").innerHTML = mapChecked[2];
-	document.getElementById("suggestionFour").innerHTML = mapChecked[3];
-	document.getElementById("suggestionFive").innerHTML = mapChecked[4];
+	if (mapChecked.length <= 5) {
+		if (mapChecked[0]) {
+			const suggestionOneBtn = document.querySelector(".suggestionOne");
+			suggestionOneBtn.innerText = mapChecked[0];
+		}
+	}
 
 	console.log(mapChecked);
 }
