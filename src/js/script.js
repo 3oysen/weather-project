@@ -13,10 +13,17 @@ async function checkCities(text) {
 	const allCitiesToLowerCase = allCities.map((x) => x.toLowerCase());
 	const mapChecked = allCitiesToLowerCase.filter((x) => x.includes(text));
 
-	if (mapChecked.length <= 5) {
-		if (mapChecked[0]) {
-			const suggestionOneBtn = document.querySelector(".suggestionOne");
-			suggestionOneBtn.innerText = mapChecked[0];
+	if (mapChecked.length) {
+		const suggestionSection = document.querySelector(".suggestions");
+
+		while (suggestionSection.firstChild) {
+			suggestionSection.removeChild(suggestionSection.firstChild);
+		}
+
+		for (let i = 0; i < Math.min(5, mapChecked.length); i++) {
+			const suggestionBtn = document.createElement("buttton");
+			suggestionBtn.innerText = mapChecked[0];
+			suggestionSection.appendChild(suggestionBtn);
 		}
 	}
 
