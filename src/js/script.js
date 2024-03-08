@@ -20,11 +20,11 @@ async function checkCities(text) {
 			suggestionSection.removeChild(suggestionSection.firstChild);
 		}
 
-		for (let i = 0; i < Math.min(5, mapChecked.length); i++) {
-			const suggestionBtn = document.createElement("buttton");
-			suggestionBtn.innerText = mapChecked[0];
+		mapChecked.slice(0, 5).forEach((city) => {
+			const suggestionBtn = document.createElement("button");
+			suggestionBtn.innerText = city;
 			suggestionSection.appendChild(suggestionBtn);
-		}
+		});
 	}
 
 	console.log(mapChecked);
@@ -34,7 +34,6 @@ function handleInputChange() {
 	const inputData = searchInput.value;
 	const text = inputData.toLowerCase();
 	checkCities(text);
-	// console.log(text);
 }
 
 searchInput.addEventListener("input", handleInputChange);
@@ -71,5 +70,3 @@ async function checkWeather(city) {
 searchBtn.addEventListener("click", () => {
 	checkWeather(searchInput.value);
 });
-
-// checkCities();
